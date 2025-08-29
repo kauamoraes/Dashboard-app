@@ -1,69 +1,106 @@
-# React + TypeScript + Vite
+Dashboard Administrativo Interativo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Controle total das operações, produtos, vendas e comunicação em um só lugar.
 
-Currently, two official plugins are available:
+📝 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Um dashboard completo desenvolvido em React + TypeScript + Tailwind CSS, projetado para empresas acompanharem produtos, pedidos, RFQs, produção, analytics e mensagens em tempo real.
 
-## Expanding the ESLint configuration
+💡 Motivação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Empresas precisam centralizar operações em um único painel.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Monitorar métricas de vendas, estoque e produtividade de forma rápida.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+Facilitar a comunicação interna através de mensagens.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🚀 Funcionalidades
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Dashboard: cards com métricas de vendas, usuários, pedidos e taxa de conversão.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Products: adicionar, editar, remover e filtrar produtos.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+New RFQ: criar novos pedidos de cotação com modal interativo.
+
+Productions: acompanhamento de produção em andamento.
+
+Analytics: gráficos de vendas e usuários (Recharts).
+
+Message: chat simples com seleção de contatos.
+
+Payment: controle de pagamentos.
+
+POS: finalização de vendas rápidas.
+
+Profile: edição de informações do usuário.
+
+🛠 Tecnologias
+
+Frontend: React + TypeScript
+
+Estilo: Tailwind CSS
+
+Roteamento: react-router-dom
+
+Gráficos: Recharts
+
+Gerenciamento de estado: useState, modais e formulários
+
+
+Substitua os link-do-print-aqui pelos links das imagens hospedadas ou pastas do seu projeto.
+
+⚙️ Como Usar
+
+Clone o repositório:
+
+git clone https://github.com/seu-usuario/seu-repo.git
+
+
+Instale dependências:
+
+npm install
+
+
+Rode o projeto:
+
+npm start
+
+
+Abra http://localhost:3000
+ no navegador.
+
+📈 Lógica e Estado
+
+Adicionar Produto:
+
+setProducts(prev => [...prev, novoProduto])
+
+
+Editar Produto:
+
+setProducts(prev => prev.map(p => p.id === edited.id ? edited : p))
+
+
+Remover Produto:
+
+setProducts(prev => prev.filter(p => p.id !== id))
+
+🧠 Aprendizados
+
+Manipulação de listas com React Hooks
+
+Criação de modais e formulários interativos
+
+Layout responsivo com Tailwind
+
+Visualização de dados com gráficos (Recharts)
+
+📌 Próximos Passos
+
+Integração com backend/API real
+
+Autenticação e permissões de usuário
+
+Dashboard responsivo para mobile
+
+Melhorias em UI/UX, filtros e animações
